@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Journal | AutoMatrix</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top w-full z-50 py-4 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-indigo-600 flex items-center">
+        <i class="fas fa-brain mr-2"></i> AutoMatrix
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="/" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Home</a>
+        <a href="/ai-assistant" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">AI Wellbeing Assistant</a>
+        <a href="/journal" class="nav-link text-indigo-600 font-medium">Daily Journal</a>
+        <a href="/team" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Team</a>
+      </div>
+      <button class="md:hidden text-gray-600">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Daily Journal</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Journaling can help you understand your thoughts and feelings more clearly. Try writing daily entries.
+        </p>
+      </div>
+      
+      <div class="journal-entry bg-white p-6 rounded-xl shadow-md mb-8">
+        <h2 class="text-xl font-bold mb-4">New Journal Entry</h2>
+        <form id="journal-form">
+          <div class="mb-4">
+            <label for="entry-date" class="block text-gray-700 mb-2">Date</label>
+            <input type="date" id="entry-date" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div class="mb-4">
+            <label for="entry-title" class="block text-gray-700 mb-2">Title</label>
+            <input type="text" id="entry-title" placeholder="How are you feeling today?" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div class="mb-4">
+            <label for="entry-content" class="block text-gray-700 mb-2">Your Thoughts</label>
+            <textarea id="entry-content" rows="6" placeholder="Write about your day, your feelings, or anything on your mind..." class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+          </div>
+          <div class="flex justify-end">
+            <button type="submit" class="bg-indigo-600 text-white py-2 px-6 rounded-lg hover:bg-indigo-700 transition-all duration-300">
+              Save Entry
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <div id="journal-entries" class="space-y-6">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Previous Entries</h2>
+        <!-- Entries will be loaded here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer py-12 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-4">AutoMatrix</h3>
+          <p class="text-gray-300">
+            Revolutionizing mental health support through AI technology.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="/" class="text-gray-300 hover:text-white">Home</a></li>
+            <li><a href="/ai-assistant" class="text-gray-300 hover:text-white">AI Assistant</a></li>
+            <li><a href="/journal" class="text-gray-300 hover:text-white">Daily Journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Journaling Benefits</h4>
+          <p class="text-gray-300 text-sm">
+            Regular journaling can help reduce stress, manage anxiety, and cope with depression.
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+        <p>© 2023 AutoMatrix. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/journal.js"></script>
+</body>
+</html>
